@@ -1,0 +1,29 @@
+.theme-toggle{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+border:none;
+
+cursor:pointer;
+
+font-size:22px;
+
+background:#2563EB;
+
+color:white;
+
+transition:.3s;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.theme-toggle:hover{
+
+transform:rotate(180deg) scale(1.08);
+
+}

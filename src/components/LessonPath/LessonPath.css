@@ -1,0 +1,25 @@
+.lesson-path{
+    width:450px;
+    margin:auto;
+    padding:50px 0;
+    position:relative;
+}
+
+.lesson-path::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:#dbeafe;
+
+    transform:translateX(-50%);
+}

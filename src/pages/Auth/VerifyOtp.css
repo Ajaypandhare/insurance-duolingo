@@ -1,0 +1,328 @@
+/* ==========================================
+   Verify OTP Page
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.otp-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8, #2563eb);
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+/* ==========================================
+   Animated Background
+========================================== */
+
+.otp-page::before,
+.otp-page::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .25;
+}
+
+.otp-page::before {
+  width: 350px;
+  height: 350px;
+  background: #60a5fa;
+  top: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.otp-page::after {
+  width: 280px;
+  height: 280px;
+  background: #38bdf8;
+  right: -80px;
+  bottom: -80px;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.otp-card {
+
+  width: 520px;
+  max-width: 100%;
+
+  background: rgba(255,255,255,.15);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,.20);
+
+  border-radius: 28px;
+
+  padding: 50px;
+
+  text-align: center;
+
+  color: white;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,.35);
+
+  z-index: 5;
+
+}
+
+/* ==========================================
+   Icon
+========================================== */
+
+.otp-icon {
+
+  width: 90px;
+  height: 90px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.20);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 42px;
+
+  margin-bottom: 25px;
+
+}
+
+.otp-card h1 {
+
+  font-size: 34px;
+
+  margin-bottom: 15px;
+
+}
+
+.otp-card p {
+
+  line-height: 1.7;
+
+  color: rgba(255,255,255,.90);
+
+  margin-bottom: 35px;
+
+}
+
+.otp-card strong {
+
+  color: #ffffff;
+
+}
+
+/* ==========================================
+   OTP Inputs
+========================================== */
+
+.otp-inputs {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+
+}
+
+.otp-inputs input {
+
+  width: 60px;
+
+  height: 65px;
+
+  border-radius: 16px;
+
+  border: 2px solid rgba(255,255,255,.30);
+
+  background: rgba(255,255,255,.10);
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  transition: .3s;
+
+}
+
+.otp-inputs input:focus {
+
+  outline: none;
+
+  border-color: white;
+
+  background: rgba(255,255,255,.20);
+
+  transform: scale(1.08);
+
+  box-shadow: 0 0 18px rgba(255,255,255,.35);
+
+}
+
+/* ==========================================
+   Verify Button
+========================================== */
+
+.verify-btn {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: white;
+
+  color: #2563eb;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+}
+
+.verify-btn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 15px 30px rgba(255,255,255,.25);
+
+}
+
+/* ==========================================
+   Timer
+========================================== */
+
+.timer {
+
+  margin-top: 30px;
+
+  font-size: 15px;
+
+  color: rgba(255,255,255,.90);
+
+}
+
+.resend-btn {
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+}
+
+.resend-btn:hover {
+
+  text-decoration: underline;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+  .otp-card{
+
+    padding:35px 25px;
+
+  }
+
+  .otp-card h1{
+
+    font-size:28px;
+
+  }
+
+  .otp-inputs{
+
+    gap:10px;
+
+  }
+
+  .otp-inputs input{
+
+    width:48px;
+
+    height:55px;
+
+    font-size:22px;
+
+  }
+
+}
+
+@media(max-width:480px){
+
+  .otp-inputs{
+
+    gap:6px;
+
+  }
+
+  .otp-inputs input{
+
+    width:42px;
+
+    height:50px;
+
+    font-size:20px;
+
+  }
+
+}

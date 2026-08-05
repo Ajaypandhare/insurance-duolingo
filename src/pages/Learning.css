@@ -1,0 +1,182 @@
+.learning-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.learning-progress {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border-radius: 50px;
+  transition: width .4s ease;
+}
+
+.learning-progress span {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.learning-card {
+  background: white;
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-icon {
+  font-size: 80px;
+  margin-bottom: 25px;
+}
+
+.learning-card h1 {
+  font-size: 38px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.learning-card p {
+  font-size: 20px;
+  color: #64748b;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.learning-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.previous-btn,
+.next-btn {
+  border: none;
+  padding: 15px 35px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.previous-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.previous-btn:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.previous-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.next-btn {
+  background: linear-gradient(135deg,#2563eb,#4f46e5);
+  color: white;
+  box-shadow: 0 12px 25px rgba(37,99,235,.25);
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+}
+
+.learning-not-found {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.learning-not-found button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width:768px){
+
+.learning-card{
+padding:35px 20px;
+min-height:350px;
+}
+
+.learning-card h1{
+font-size:28px;
+}
+
+.learning-card p{
+font-size:17px;
+}
+
+.slide-icon{
+font-size:60px;
+}
+
+.learning-buttons{
+flex-direction:column;
+gap:15px;
+}
+
+.previous-btn,
+.next-btn{
+width:100%;
+}
+
+}
+
+.story-box{
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    border-radius:12px;
+    padding:20px;
+    margin:25px 0;
+    text-align:left;
+}
+
+.story-box p{
+    margin:12px 0;
+    color:#334155;
+    line-height:1.7;
+}
+
+.takeaway-box{
+    background:#ecfeff;
+    border:1px solid #a5f3fc;
+    border-radius:14px;
+    padding:20px;
+    margin-top:25px;
+}
+
+.takeaway-box h3{
+    color:#0891b2;
+    margin-bottom:10px;
+}
+
+.takeaway-box p{
+    color:#155e75;
+}

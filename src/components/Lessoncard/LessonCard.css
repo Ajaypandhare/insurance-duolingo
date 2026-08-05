@@ -1,0 +1,58 @@
+.lesson-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+}
+
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-header h3 {
+  margin: 0;
+}
+
+.completed {
+  color: white;
+  background: #16a34a;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.pending {
+  color: white;
+  background: #f59e0b;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.lesson-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+}
+
+.lesson-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2b5cff;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.lesson-btn:hover {
+  background: #1848e6;
+}

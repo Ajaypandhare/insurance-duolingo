@@ -1,0 +1,462 @@
+/* ==========================================
+   Register Page
+========================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+.register-page{
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:40px;
+
+  background:linear-gradient(135deg,#0F172A,#1E40AF,#2563EB);
+
+  overflow:hidden;
+
+  position:relative;
+
+}
+
+/* ===========================
+Background
+=========================== */
+
+.bg-circle{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(90px);
+
+  opacity:.25;
+
+  animation:float 8s ease-in-out infinite;
+
+}
+
+.circle1{
+
+  width:350px;
+
+  height:350px;
+
+  background:#60A5FA;
+
+  top:-80px;
+
+  left:-80px;
+
+}
+
+.circle2{
+
+  width:300px;
+
+  height:300px;
+
+  background:#38BDF8;
+
+  right:-100px;
+
+  bottom:-80px;
+
+  animation-delay:2s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-25px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===========================
+Card
+=========================== */
+
+.register-card{
+
+  width:1300px;
+
+  max-width:100%;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  background:rgba(255,255,255,.12);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+}
+
+/* ===========================
+Left
+=========================== */
+
+.register-left{
+
+  color:white;
+
+  padding:70px 60px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+}
+
+.company-logo{
+
+  width:180px;
+
+  background:white;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  margin-bottom:40px;
+
+}
+
+.register-left h1{
+
+  font-size:42px;
+
+  margin-bottom:20px;
+
+}
+
+.register-left p{
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  opacity:.95;
+
+}
+
+.register-left ul{
+
+  margin-top:35px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+  list-style:none;
+
+}
+
+.register-left li{
+
+  padding:15px 20px;
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,.12);
+
+}
+
+/* ===========================
+Right
+=========================== */
+
+.register-right{
+
+  background:white;
+
+  padding:55px;
+
+  overflow-y:auto;
+
+  max-height:90vh;
+
+}
+
+.register-right h2{
+
+  font-size:34px;
+
+  color:#0F172A;
+
+  margin-bottom:30px;
+
+}
+
+.register-right label{
+
+  display:block;
+
+  margin-top:18px;
+
+  margin-bottom:8px;
+
+  font-weight:700;
+
+  color:#334155;
+
+}
+
+/* ===========================
+Row
+=========================== */
+
+.row{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:20px;
+
+}
+
+/* ===========================
+Input
+=========================== */
+
+.register-right input,
+
+.register-right select{
+
+  width:100%;
+
+  padding:15px;
+
+  border-radius:12px;
+
+  border:1px solid #CBD5E1;
+
+  font-size:15px;
+
+  transition:.3s;
+
+}
+
+.register-right input:focus,
+
+.register-right select:focus{
+
+  outline:none;
+
+  border-color:#2563EB;
+
+  box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ===========================
+Password
+=========================== */
+
+.password-box{
+
+  position:relative;
+
+}
+
+.password-box input{
+
+  padding-right:60px;
+
+}
+
+.eye-btn{
+
+  position:absolute;
+
+  right:15px;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  background:none;
+
+  border:none;
+
+  cursor:pointer;
+
+  font-size:18px;
+
+}
+
+/* ===========================
+Button
+=========================== */
+
+.register-btn{
+
+  margin-top:35px;
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);
+
+  color:white;
+
+  font-size:17px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.register-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:0 20px 35px rgba(37,99,235,.30);
+
+}
+
+/* ===========================
+Login Link
+=========================== */
+
+.login-link{
+
+  margin-top:30px;
+
+  text-align:center;
+
+  color:#64748B;
+
+}
+
+.login-link a{
+
+  margin-left:8px;
+
+  text-decoration:none;
+
+  color:#2563EB;
+
+  font-weight:700;
+
+}
+
+/* ===========================
+Scrollbar
+=========================== */
+
+.register-right::-webkit-scrollbar{
+
+  width:8px;
+
+}
+
+.register-right::-webkit-scrollbar-thumb{
+
+  background:#CBD5E1;
+
+  border-radius:20px;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1000px){
+
+.register-card{
+
+grid-template-columns:1fr;
+
+}
+
+.register-left{
+
+display:none;
+
+}
+
+.register-right{
+
+max-height:none;
+
+padding:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.register-page{
+
+padding:15px;
+
+}
+
+.row{
+
+grid-template-columns:1fr;
+
+}
+
+.register-right{
+
+padding:25px;
+
+}
+
+.register-right h2{
+
+font-size:28px;
+
+}
+
+}
