@@ -16,6 +16,7 @@ function Quiz(){
     const questions = quizQuestions[id] || [];
     navigate("/quiz/5")
 
+    const [userAnswers, setUserAnswers] = useState([]);
 
     const [current,setCurrent] = useState(0);
 
@@ -25,44 +26,67 @@ function Quiz(){
 
 
 
-    const handleNext = () => {
+const handleNext = () => {
 
-    let finalScore = score;
+  const currentQuestion = questions[current];
 
+  const isCorrect =
+    selected === currentQuestion.answer;
 
-    if(selected === questions[current].answer){
-        finalScore++;
-    }
-
-
-    if(current + 1 < questions.length){
-
-        setScore(finalScore);
-
-        setCurrent(current + 1);
-
-        setSelected("");
-
-    }
-    else{
+  const newScore =
+    isCorrect ? score + 1 : score;
 
 
-        navigate("/result", {
+  const answerData = {
 
-            state: {
+    questionId: currentQuestion.id,
 
-                score: finalScore,
+    question: currentQuestion.question,
 
-                total: questions.length,
+    selectedAnswer: selected,
 
-                lessonId: id
+    correctAnswer: currentQuestion.answer,
 
-            }
+    isCorrect: isCorrect
 
-        });
+  };
 
 
-    }
+  const updatedAnswers = [
+    ...userAnswers,
+    answerData
+  ];
+
+
+  if (current + 1 < questions.length) {
+
+    setUserAnswers(updatedAnswers);
+
+    setScore(newScore);
+
+    setCurrent(current + 1);
+
+    setSelected("");
+
+  } else {
+
+    navigate("/result", {
+
+      state: {
+
+        score: newScore,
+
+        total: questions.length,
+
+        lessonId: id,
+
+        answers: updatedAnswers
+
+      }
+
+    });
+
+  }
 
 };
 
