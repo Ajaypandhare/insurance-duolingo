@@ -1,15 +1,10 @@
-
-name: Deploy React App to GitHub Pages
+name: Deploy Insurance Duolingo
 
 on:
   push:
-    branches: [main]
+    branches:
+      - git-deployment-branch
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
